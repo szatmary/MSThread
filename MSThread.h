@@ -29,7 +29,7 @@ void threadFunc(void *param)
 int main()
 {
 	// create a prcessing queue with 8 threads
-	MSProcessingQueue<int> sockethandler(8);
+	MSProcessingQueue<int> sockethandler(8,(MSThreadFunc)threadFunc);
 
 	int sock = socket();
 	listen(sock);
