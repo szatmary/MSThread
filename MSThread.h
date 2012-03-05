@@ -88,7 +88,7 @@ public:
 class MSSemaphore : public MSCondition
 {
 private:
-	long count;
+	long volatile count;
 public:
 	MSSemaphore(unsigned long initialCount = 0);
 
